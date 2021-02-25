@@ -25,7 +25,7 @@ SECRET_KEY = "bucx(gfifrc5zneat0gek$xm5c=d4b_q_k%eq7mk-b+ro0(xg&"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -38,8 +38,12 @@ DJANGO_APPS = [
     "django.contrib.staticfiles",
 ]
 
+THIRDS_PARTY_APPS = ["django_countries"]
+
 PROJECT_APPS = [
+    "core.apps.CoreConfig",
     "users.apps.UsersConfig",
+    "rooms.apps.RoomsConfig",
 ]
 INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS
 
